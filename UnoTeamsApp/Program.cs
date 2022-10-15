@@ -1,3 +1,4 @@
+using Uno.Wasm.Bootstrap.Server;
 using UnoTeamsApp.Interop.TeamsSDK;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,11 +32,13 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.UseUnoFrameworkFiles();
+app.MapFallbackToFile("index.html");
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapBlazorHub();
-    endpoints.MapFallbackToPage("/_Host");
+    
+    //endpoints.MapBlazorHub();
+    //endpoints.MapFallbackToPage("/_Host");
     endpoints.MapControllers();
 });
 

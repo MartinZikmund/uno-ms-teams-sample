@@ -1,3 +1,4 @@
+using Microsoft.TeamsFx;
 using Uno.Wasm.Bootstrap.Server;
 using UnoTeamsApp.Interop.TeamsSDK;
 
@@ -37,8 +38,8 @@ app.MapFallbackToFile("index.html");
 app.UseEndpoints(endpoints =>
 {
     
-    //endpoints.MapBlazorHub();
-    //endpoints.MapFallbackToPage("/_Host");
+    endpoints.MapBlazorHub();
+    //endpoints.MapFallbackToFile("index.html");
     endpoints.MapControllers();
 });
 

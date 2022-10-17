@@ -26,5 +26,14 @@ namespace UnoApp
         {
             this.InitializeComponent();
         }
+
+        private async void ClickHandler(object sender, RoutedEventArgs args)
+        {
+            var contentDialog = new ContentDialog();
+            contentDialog.Title = "Welcome";
+            contentDialog.Content = "This is Uno Platform WebAssembly in Microsoft Teams!";
+            contentDialog.PrimaryButtonText = "Ok";
+            await contentDialog.ShowAsync();
+        }
     }
 }

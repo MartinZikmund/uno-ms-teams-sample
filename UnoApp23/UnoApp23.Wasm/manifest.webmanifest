@@ -1,0 +1,10 @@
+{
+  "background_color": "#ffffff",
+  "description": "UnoApp23",
+  "display": "standalone",
+  "name": "UnoApp23",
+  "short_name": "UnoApp23",
+  "start_url": "/index.html",
+  "theme_color": "#ffffff",
+  "scope": "/"
+}
